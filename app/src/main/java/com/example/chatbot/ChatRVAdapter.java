@@ -39,6 +39,7 @@ public class ChatRVAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         ChatsModel chatsModel= chatsModelArrayList.get(position);
+
         switch(chatsModel.getSender()){
             case "user":
                 ((UserViewHolder)holder).userTV.setText(chatsModel.getMessage());
